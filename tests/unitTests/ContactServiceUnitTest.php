@@ -62,9 +62,11 @@ final class ContactServiceUnitTest extends TestCase {
         $this->contactService->searchContact("");
     }
 
-    public function testSearchContactOKt() {
+    public function testSearchContactOK() {
         $response = $this->contactService->searchContact("simo");
         $this->assertIsArray($response);
+        self::assertEquals("simo", $response[0]['nom']);
+        self::assertEquals("gilles", $response[0]['prenom']);
     }
 
     public function testModifyContactWithInvalidId() {
@@ -102,31 +104,31 @@ final class ContactServiceUnitTest extends TestCase {
         $this->assertTrue($response);
     }
 
-    public function testgetAllContacts() {
+    public function testGetAllContacts() {
         $response = $this->contactService->getAllContacts();
         $this->assertIsArray($response);
         $this->assertNotEmpty($response);
     }
 
-    public function testgetContactWithInvalidNumber() {
+    public function testGetContactWithInvalidNumber() {
         $this->expectException(invalidInputException::class);
         $this->expectExceptionMessage("l'id doit être un entier non nul");
         $this->contactService->getContact("abc");
     }
 
-    public function testgetContactWithIdUnderZero() {
+    public function testGetContactWithIdUnderZero() {
         $this->expectException(invalidInputException::class);
         $this->expectExceptionMessage("l'id doit être un entier non nul");
         $this->contactService->getContact(-1);
     }
 
-    public function testgetContactWithoutId() {
+    public function testGetContactWithoutId() {
         $this->expectException(invalidInputException::class);
         $this->expectExceptionMessage("l'id doit être renseigné");
         $this->contactService->getContact(null);
     }
 
-    public function testgetContactOK() {
+    public function testGetContactOK() {
         $response = $this->contactService->getContact(1);
         $this->assertEquals("martin", $response["nom"]);
     }
@@ -135,6 +137,11 @@ final class ContactServiceUnitTest extends TestCase {
         $this->expectException(invalidInputException::class);
         $this->expectExceptionMessage("l'id doit être un entier non nul");
         $this->contactService->deleteContact("abc");
+    }
+
+    public function testDeleteContactWithIdUnderZero() {
+        $this->expectException(invalidInputException::class);
+        $this->expectExceptionMessage("l'id doit être un entier non nul");
         $this->contactService->deleteContact(-1);
     }
 
@@ -145,7 +152,7 @@ final class ContactServiceUnitTest extends TestCase {
     }
 
     public function testDeleteContactWithIdOk() {
-        $response = $this->contactService->deleteContact(5);
+        $response = $this->contactService->deleteContact(1);
         $this->assertTrue($response);
     }
 
