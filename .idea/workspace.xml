@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1add41b-10f1-44a9-95a6-88b28431153d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Rattrapage-tests-logiciels.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Rattrapage-tests-logiciels.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contacts.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/src/contacts.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/integrationTests/ContactServiceIntegrationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/integrationTests/ContactServiceIntegrationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unitTests/ContactServiceUnitTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unitTests/ContactServiceUnitTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,25 +279,25 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="PHPUnit.ContactServiceIntegrationTest">
-    <configuration name="ContactServiceIntegrationTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="ContactServiceIntegrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/integrationTests/ContactServiceIntegrationTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.ContactServiceIntegrationTest.testModifyContact">
+    <configuration name="ContactServiceIntegrationTest.testCreationContact" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="ContactServiceIntegrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/integrationTests/ContactServiceIntegrationTest.php" method="testCreationContact" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ContactServiceIntegrationTest.testDeleteContact" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="ContactServiceIntegrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/integrationTests/ContactServiceIntegrationTest.php" method="testDeleteContact" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="ContactServiceIntegrationTest.testGetContact" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="ContactServiceIntegrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/integrationTests/ContactServiceIntegrationTest.php" method="testGetContact" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="ContactServiceIntegrationTest.testModifyContact" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="ContactServiceIntegrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/integrationTests/ContactServiceIntegrationTest.php" method="testModifyContact" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ContactServiceUnitTest.testDeleteContactWithIdUnderZero" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="ContactServiceUnitTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/unitTests/ContactServiceUnitTest.php" method="testDeleteContactWithIdUnderZero" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ContactServiceUnitTest.testModifyContactWithoutInvalidName" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="ContactServiceUnitTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/unitTests/ContactServiceUnitTest.php" method="testModifyContactWithoutInvalidName" scope="Method" />
+    <configuration name="ContactServiceIntegrationTest.testSearchContact" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="ContactServiceIntegrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/integrationTests/ContactServiceIntegrationTest.php" method="testSearchContact" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -311,11 +306,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ContactServiceIntegrationTest" />
         <item itemvalue="PHPUnit.ContactServiceIntegrationTest.testModifyContact" />
         <item itemvalue="PHPUnit.ContactServiceIntegrationTest.testDeleteContact" />
-        <item itemvalue="PHPUnit.ContactServiceUnitTest.testDeleteContactWithIdUnderZero" />
-        <item itemvalue="PHPUnit.ContactServiceUnitTest.testModifyContactWithoutInvalidName" />
+        <item itemvalue="PHPUnit.ContactServiceIntegrationTest.testGetContact" />
+        <item itemvalue="PHPUnit.ContactServiceIntegrationTest.testCreationContact" />
+        <item itemvalue="PHPUnit.ContactServiceIntegrationTest.testSearchContact" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +326,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657008757357</updated>
       <workItem from="1657008758733" duration="2346000" />
-      <workItem from="1688633572372" duration="2576000" />
+      <workItem from="1688633572372" duration="3590000" />
     </task>
     <servers />
   </component>

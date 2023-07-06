@@ -55,19 +55,24 @@ final class ContactServiceIntegrationTest extends TestCase
 
     public function testCreationContact()
     {
-        $this->contactService->createContact('abcx', 'def');
+        $rep = $this->contactService->getAllContacts();
+        $this->contactService->createContact('adrien', 'marc');
+        $rap = $this->contactService->getAllContacts();
+        $data = end($rap);
 
-        $response = $this->contactService->searchContact('abcx');
-        $this->assertEquals('abcx', $response[0]['nom']);
+        $this->assertEquals(count($rep), count($rap)-1);
+        $this->assertEquals('adrien', $data['nom']);
+        $this->assertEquals('marc', $data['prenom']);
         $this->testDeleteAll();
     }
 
     public function testSearchContact()
     {
-        $this->contactService->createContact('abcx', 'def');
-        $response = $this->contactService->searchContact('abcx');
-        $this->assertIsArray($response);
-        $this->assertEquals(1, count($response));
+        $this->contactService->createContact('adrien', 'marc');
+
+        $response = $this->contactService->searchContact('marc');
+        $this->assertEquals('adrien', $response[0]['nom']);
+        $this->assertEquals('marc', $response[0]['prenom']);
         $this->testDeleteAll();
     }
 
