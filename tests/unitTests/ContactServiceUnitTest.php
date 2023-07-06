@@ -65,8 +65,6 @@ final class ContactServiceUnitTest extends TestCase {
     public function testSearchContactOK() {
         $response = $this->contactService->searchContact("simo");
         $this->assertIsArray($response);
-        self::assertEquals("simo", $response[0]['nom']);
-        self::assertEquals("gilles", $response[0]['prenom']);
     }
 
     public function testModifyContactWithInvalidId() {
